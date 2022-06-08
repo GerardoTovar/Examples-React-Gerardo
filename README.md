@@ -14,4 +14,4 @@ This example uses:
 - [React Navigation Stack 6.6.2](https://reactnavigation.org/docs/getting-started)
 - [Vector Icons 6.6.2](https://www.npmjs.com/package/react-native-vector-icons)
 
-<img src="./img/CustomCard/Screenshot.png" width="240"/>
+<img src="./img/CustomCard/Screenshot.gif" width="280"/>

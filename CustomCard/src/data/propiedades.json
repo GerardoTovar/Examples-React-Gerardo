@@ -1,0 +1,123 @@
+[
+    {
+      "uid": 1,
+      "name": "The Willows",
+      "like": ["123456"],
+      "startsScore": 5,
+      "starts":[{"user":"123456", "score": 5},{"user":"123458", "score": 4}],
+      "location": {
+          "lat":22.592239,
+          "lng":-101.998006,
+          "address": "3517 W.Gray St.Utica"
+        },
+      "img": "https://upload.wikimedia.org/wikipedia/commons/d/d5/SEPCornerDF.JPG",
+      "space": {
+          "rooms": 3,
+          "bathroom": 2
+        },
+      "surface": 230,
+      "cost": 440,
+      "currency": "USD",
+      "unitMeasurement": "USD"
+    },{
+      "uid": 2,
+      "name": "Corner House",
+      "like": ["123456"],
+      "startsScore": 4.8,
+      "starts":[{"user":"123456", "score": 5},{"user":"123458", "score": 4}],
+      "location": {
+          "lat":22.592239,
+          "lng":-101.998006,
+          "address": "3517 W.Gray St.Utica"
+        },
+      "img": "https://upload.wikimedia.org/wikipedia/commons/d/d5/SEPCornerDF.JPG",
+      "space": {
+          "rooms": 8,
+          "bathroom": 4
+        },
+      "surface": 520,
+      "cost": 5000,
+      "currency": "USD",
+      "unitMeasurement": "USD"
+    },{
+      "uid": 3,
+      "name": "Urchara House",
+      "like": ["123456"],
+      "startsScore": 0.1,
+      "starts":[{"user":"123456", "score": 5},{"user":"123458", "score": 4}],
+      "location": {
+          "lat":22.592239,
+          "lng":-101.998006,
+          "address": "3517 W.Gray St.Utica"
+        },
+      "img": "https://upload.wikimedia.org/wikipedia/commons/d/d5/SEPCornerDF.JPG",
+      "space": {
+          "rooms": 80,
+          "bathroom": 40
+        },
+      "surface": 150,
+      "cost": 350,
+      "currency": "USD",
+      "unitMeasurement": "USD"
+    },{
+      "uid": 4,
+      "name": "Urchara House the most exte",
+      "like": ["123456"],
+      "startsScore": 4.8,
+      "starts":[{"user":"123456", "score": 5},{"user":"123458", "score": 4}],
+      "location": {
+          "lat":22.592239,
+          "lng":-101.998006,
+          "address": "3517 W.Gray St.Utica"
+        },
+      "img": "https://upload.wikimedia.org/wikipedia/commons/d/d5/SEPCornerDF.JPG",
+      "space": {
+          "rooms": 5,
+          "bathroom": 2
+        },
+      "surface": 200,
+      "cost": 400,
+      "currency": "USD",
+      "unitMeasurement": "USD"
+    },{
+      "uid": 5,
+      "name": "Urchara House",
+      "like": ["123456"],
+      "startsScore": 3.8,
+      "starts":[{"user":"123456", "score": 5},{"user":"123458", "score": 4}],
+      "location": {
+          "lat":22.592239,
+          "lng":-101.998006,
+          "address": "3517 W.Gray St.Utica"
+        },
+      "img": "https://upload.wikimedia.org/wikipedia/commons/d/d5/SEPCornerDF.JPG",
+      "space": {
+          "rooms": 8,
+          "bathroom": 4
+        },
+      "surface": 20,
+      "cost": 40,
+      "currency": "USD",
+      "unitMeasurement": "USD"
+    },{
+      "uid": 3,
+      "name": "Urchara House",
+      "like": ["123456"],
+      "startsScore": 0.1,
+      "starts":[{"user":"123456", "score": 5},{"user":"123458", "score": 4}],
+      "location": {
+          "lat":22.592239,
+          "lng":-101.998006,
+          "address": "3517 W.Gray St.Utica"
+        },
+      "img": "https://upload.wikimedia.org/wikipedia/commons/d/d5/SEPCornerDF.JPG",
+      "space": {
+          "rooms": 80,
+          "bathroom": 40
+        },
+      "surface": 150,
+      "cost": 350,
+      "currency": "USD",
+      "unitMeasurement": "USD"
+    }
+]

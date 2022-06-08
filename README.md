@@ -6,7 +6,7 @@ You may find some of the examples being outdated in time, in terms of framework 
 
 ## Custom Card Using Styled Components in React Native
 
-- 🐙 [Repo]([link](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/CustomCard))
+- 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/CustomCard)
 
 This example uses:
 - React Native `0.68.2`

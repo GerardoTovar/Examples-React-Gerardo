@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Modal, ActivityIndicator, Text, View} from 'react-native';
 import Styles from './Styles';
 
-const BusyIndicator = props => {
-  const {visible, text} = props;
-  return (
+const useBusyIndicator = () => {
+  const [visible, setVisible] = useState(false);
+  const [text, setText] = useState('');
+
+  const Texto = string => setText(string);
+  const Visible = boolean => setVisible(boolean);
+
+  const Component = (
     <Modal visible={visible} transparent={true}>
       <View style={Styles.container}>
         <View style={Styles.background}>
@@ -14,5 +19,6 @@ const BusyIndicator = props => {
       </View>
     </Modal>
   );
+  return {Texto, Visible, Component};
 };
-export default BusyIndicator;
+export default useBusyIndicator;

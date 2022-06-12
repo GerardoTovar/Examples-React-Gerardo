@@ -16,7 +16,7 @@ This example uses:
 
 <img src="./img/CustomCard/Screenshot.gif" width="280"/>
 
-## Custom Card Using Styled Components in React Native
+## Custom Modal Using ActivityIndicator as a Component hook in React Native
 
 - 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/BusyIndicator)
 
@@ -25,5 +25,22 @@ This example uses:
 - [React Navigation Stack 6.6.2](https://reactnavigation.org/docs/getting-started)
 - **Description**: A modal was used to cover the whole screen, 
 inside the modal it has an ActivityIndicator, so you can customize everything
+
+<img src="./img/BusyIndicator/Screenshot.gif" width="280"/>
+
+## Custom Modal Using ActivityIndicator as a Component hook in React Native
+
+- 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/BusyIndicatorRive)
+
+This example uses:
+- React Native `0.68.2`
+- [React Navigation Stack 6.6.2](https://reactnavigation.org/docs/getting-started)
+- [rive-react-native 2.1.37](https://github.com/rive-app/rive-react-native)
+- -[rive Community](https://rive.app/community/)
+- -[rive quick-start](https://help.rive.app/runtimes/quick-start)
+- -[rive android Doc](https://github.com/rive-app/rive-android)
+- **Description**: A modal was used to cover the whole screen, 
+inside the modal it has an Rive, you can call different methods depending 
+on the animation you want to show
 
 <img src="./img/BusyIndicator/Screenshot.gif" width="280"/>

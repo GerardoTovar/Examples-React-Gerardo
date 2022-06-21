@@ -22,7 +22,7 @@ const Home = ({navigation}) => {
   };
 
   const bookupdate = {
-    _id: '62abb8a385d5c2126afc987e', // cambia el id manual
+    _id: '62b21648b020cc4e70f60baf', // cambia el id manual
     title: 'titfsdf',
     description: 'dfssdfsddf',
   };

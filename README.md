@@ -44,3 +44,14 @@ inside the modal it has an Rive, you can call different methods depending
 on the animation you want to show
 
 <img src="./img/BusyIndicatorRive/Screenshot.gif" width="280"/>
+
+## Custom Modal Using Rive as a Component hook in React Native
+
+- 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/RnMongoCRUD1)
+
+This example uses:
+- React Native `0.68.2`
+- [React Navigation Stack 6.6.2](https://reactnavigation.org/docs/getting-started)
+- **Description**: It is just an example of how to implement mongodb CRUD, the backend is in ES6+
+
+<img src="./img/RnMongoCRUD1/Screenshot.gif" width="280"/>

@@ -4,18 +4,6 @@
 You may find some of the examples being outdated in time, in terms of framework updates or libraries. Don't worry the concept would be the same.
 </blockquote>
 
-## Custom Card Using Styled Components in React Native
-
-- 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/CustomCard)
-
-This example uses:
-- React Native `0.68.2`
-- [styled components 5.3.5](https://www.npmjs.com/package/styled-components)
-- [React Navigation Stack 6.6.2](https://reactnavigation.org/docs/getting-started)
-- [Vector Icons 6.6.2](https://www.npmjs.com/package/react-native-vector-icons)
-
-<img src="./img/CustomCard/Screenshot.gif" width="280"/>
-
 ## Custom Modal Using ActivityIndicator as a Component hook in React Native
 
 - 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/BusyIndicator)
@@ -55,3 +43,17 @@ This example uses:
 - **Description**: It is just an example of how to implement mongodb CRUD, the backend is in ES6+
 
 <img src="./img/RnMongoCRUD1/Screenshot.gif" width="280"/>
+
+## Custom Card Using Styled Components and lottie in React Native
+
+- 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/RnLottieAnimation)
+
+This example uses:
+- React Native `0.68.2`
+- [styled components 5.3.5](https://www.npmjs.com/package/styled-components)
+- [React Navigation Stack 6.6.2](https://reactnavigation.org/docs/getting-started)
+- [Vector Icons 6.6.2](https://www.npmjs.com/package/react-native-vector-icons)
+- [lottie 5.1.3](https://github.com/lottie-react-native/lottie-react-native)
+- **Description**: I put two buttons, one is an icon button, and the other is a lottie button.
+
+<img src="./img/RnLottieAnimation/Screenshot.gif" width="280"/>

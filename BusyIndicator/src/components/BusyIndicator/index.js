@@ -4,21 +4,22 @@ import Styles from './Styles';
 
 const useBusyIndicator = () => {
   const [visible, setVisible] = useState(false);
-  const [text, setText] = useState('');
+  const [text, setText] = useState('Loading');
+  const BIText = string => setText(string);
 
-  const Texto = string => setText(string);
-  const Visible = boolean => setVisible(boolean);
-
-  const Component = (
-    <Modal visible={visible} transparent={true}>
-      <View style={Styles.container}>
-        <View style={Styles.background}>
-          <ActivityIndicator color="#33A8FF" size={50} />
-          <Text style={Styles.message}>{text}</Text>
+  const BIVisible = boolean => setVisible(boolean);
+  const BusyIndicator = () => {
+    return (
+      <Modal visible={visible} transparent={true}>
+        <View style={Styles.container}>
+          <View style={Styles.background}>
+            <ActivityIndicator color="#33A8FF" size={50} />
+            <Text style={Styles.message}>{text}</Text>
+          </View>
         </View>
-      </View>
-    </Modal>
-  );
-  return {Texto, Visible, Component};
+      </Modal>
+    );
+  };
+  return {BIText, BIVisible, BusyIndicator};
 };
 export default useBusyIndicator;

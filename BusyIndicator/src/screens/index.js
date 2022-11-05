@@ -1,29 +1,27 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, Pressable, StyleSheet} from 'react-native';
 import useBusyIndicator from '../components/BusyIndicator';
 //the setTimeout mimics the time it takes for the app
 //to communicate with the api
 const Home = () => {
-  const BusyIndicator = useBusyIndicator();
+  const {BIVisible, BIText, BusyIndicator} = useBusyIndicator();
   const handlerBusyIndicator = async () => {
-    BusyIndicator.Texto('Loading');
-    BusyIndicator.Visible(true);
+    BIText('Loading');
+    BIVisible(true);
     setTimeout(() => {
-      BusyIndicator.Texto('Custom Text');
+      BIText('Custom Text');
     }, 2000);
     setTimeout(() => {
-      BusyIndicator.Visible(false);
+      BIVisible(false);
     }, 5000);
   };
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.Text}
-        onPress={() => handlerBusyIndicator()}>
+      <Pressable style={styles.Text} onPress={handlerBusyIndicator}>
         <Text style={{color: 'black'}}>Log In</Text>
-      </TouchableOpacity>
-      {BusyIndicator.Component}
+      </Pressable>
+      <BusyIndicator />
     </View>
   );
 };

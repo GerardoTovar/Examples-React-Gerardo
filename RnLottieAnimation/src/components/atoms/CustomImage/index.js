@@ -9,8 +9,7 @@ const textBold = {
   marginLeft: 5,
 };
 
-const CustomImage = props => {
-  const {name, size, color, text, uri} = props;
+const CustomImage = ({name, size, color, text, uri}) => {
   return (
     <View style={img.Cotainer}>
       <Image style={img.image} source={{uri: uri}} />

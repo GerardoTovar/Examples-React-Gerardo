@@ -1,14 +1,12 @@
 import React from 'react';
 import {Text, StyleSheet, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-const CustomIcon = props => {
-  const {name, size, color, text, styleText} = props;
+const CustomIcon = ({name, size, color, text, styleText}) => {
 
   const renderText = () => {
     if (text) {
       return <Text style={styleText}>{text}</Text>;
     }
-
     return null;
   };
 

@@ -3,8 +3,7 @@ import {TouchableOpacity, View} from 'react-native';
 import Styles from './Styles';
 import LottieView from 'lottie-react-native';
 
-const CustomLikeBtn = props => {
-  const {isLiked = false, onLikePost = () => {}} = props;
+const CustomLikeBtn = ({isLiked = false, onLikePost = () => {}}) => {
   const animation = useRef(null);
   const isFirstRun = useRef(true);
   useEffect(() => {

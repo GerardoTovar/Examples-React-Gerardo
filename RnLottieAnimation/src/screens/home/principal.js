@@ -8,11 +8,10 @@ import CustomImage from '../../components/atoms/CustomImage';
 import {CardContainer, CardContent, CardItem} from '../../styles/card';
 import styles from './styles';
 import CustomLikeBtn from '../../components/atoms/CustomLikeBtn';
-const prop = propiedades;
-const uidUser = '456321';
 
 const Principal = ({navigation, route}) => {
   const [like, setLike] = useState(false);
+  const uidUser = '456321';
   const handleLike = item => {
     if (item.like.includes(uidUser)) {
       item.like.splice(item.like.indexOf(uidUser), 1);
@@ -25,7 +24,7 @@ const Principal = ({navigation, route}) => {
   return (
     <View style={styles.container}>
       <ScrollView>
-        {prop.map((item, key) => (
+        {propiedades.map((item, key) => (
           <CardContainer key={key}>
             <CustomImage name="star" size={15} color="#eeba00" text={item.startsScore} uri={item.img}/>
             <CardContent>

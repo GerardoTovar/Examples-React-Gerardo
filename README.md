@@ -49,11 +49,11 @@ This example uses:
 - 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/RnLottieAnimation)
 
 This example uses:
-- React Native `0.68.2`
-- [styled components 5.3.5](https://www.npmjs.com/package/styled-components)
-- [React Navigation Stack 6.6.2](https://reactnavigation.org/docs/getting-started)
-- [Vector Icons 9.1.0](https://www.npmjs.com/package/react-native-vector-icons)
-- [lottie 5.1.3](https://github.com/lottie-react-native/lottie-react-native)
+- React Native `0.70.5`
+- [styled components 5.3.6](https://www.npmjs.com/package/styled-components)
+- [React Navigation Stack 6.9.1](https://reactnavigation.org/docs/getting-started)
+- [Vector Icons 9.2.0](https://www.npmjs.com/package/react-native-vector-icons)
+- [lottie 5.1.4](https://github.com/lottie-react-native/lottie-react-native)
 - **Description**: I put two buttons, one is an icon button, and the other is a lottie button.
 
 <img src="./img/RnLottieAnimation/Screenshot.gif" width="280"/>

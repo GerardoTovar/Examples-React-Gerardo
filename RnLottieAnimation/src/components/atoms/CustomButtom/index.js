@@ -2,8 +2,7 @@ import React from 'react';
 import {TouchableOpacity} from 'react-native';
 import CustomIcon from '../CustomIcon';
 
-const CustomButtom = props => {
-  const {name, size, color, onPress, text, styleText} = props;
+const CustomButtom = ({name, size, color, onPress, text, styleText}) => {
   return (
     <TouchableOpacity onPress={onPress}>
       <CustomIcon

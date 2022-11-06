@@ -21,7 +21,7 @@ const Home = () => {
       <Pressable style={styles.Text} onPress={handlerBusyIndicator}>
         <Text style={{color: 'black'}}>Log In</Text>
       </Pressable>
-      <BusyIndicator />
+      {BusyIndicator}
     </View>
   );
 };

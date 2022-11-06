@@ -5,34 +5,33 @@ import useBusyIndicator from '../components/BusyIndicator';
 //to communicate with the api and animations
 //depending on the api response
 const Home = ({navigation}) => {
-  const BusyIndicator = useBusyIndicator();
+  const {BItexto, BIvisible, BIcheck, BIerror, BIreset, BusyIndicator} =
+    useBusyIndicator();
   const handlerBusyIndicator = async () => {
-    BusyIndicator.Texto('Loading Animation');
-    BusyIndicator.Visible(true);
+    BItexto('Loading Animation');
+    BIvisible(true);
     setTimeout(() => {
-      BusyIndicator.check();
-      BusyIndicator.Texto('Check Animation');
+      BIcheck();
+      BItexto('Check Animation');
     }, 2000);
     setTimeout(() => {
-      BusyIndicator.reset();
+      BIreset();
     }, 4000);
     setTimeout(() => {
-      BusyIndicator.error();
-      BusyIndicator.Texto('Error Animation');
+      BIerror();
+      BItexto('Error Animation');
     }, 5000);
     setTimeout(() => {
-      BusyIndicator.Visible(false);
+      BIvisible(false);
     }, 7000);
   };
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.Text}
-        onPress={() => handlerBusyIndicator()}>
+      <TouchableOpacity style={styles.Text} onPress={handlerBusyIndicator}>
         <Text style={{color: 'black'}}>Log In</Text>
       </TouchableOpacity>
-      {BusyIndicator.Component}
+      {BusyIndicator}
     </View>
   );
 };

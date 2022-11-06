@@ -9,8 +9,8 @@ You may find some of the examples being outdated in time, in terms of framework 
 - 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/BusyIndicator)
 
 This example uses:
-- React Native `0.68.2`
-- [React Navigation Stack 6.6.2](https://reactnavigation.org/docs/getting-started)
+- React Native `0.70.4`
+- [React Navigation Stack 6.9.1](https://reactnavigation.org/docs/getting-started)
 - **Description**: A modal was used to cover the whole screen, 
 inside the modal it has an ActivityIndicator, so you can customize everything
 
@@ -21,9 +21,9 @@ inside the modal it has an ActivityIndicator, so you can customize everything
 - 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/BusyIndicatorRive)
 
 This example uses:
-- React Native `0.68.2`
-- [React Navigation Stack 6.6.2](https://reactnavigation.org/docs/getting-started)
-- [rive-react-native 2.1.37](https://github.com/rive-app/rive-react-native)
+- React Native `0.70.4`
+- [React Navigation Stack 6.9.1](https://reactnavigation.org/docs/getting-started)
+- [rive-react-native 3.0.41](https://github.com/rive-app/rive-react-native)
 - [rive Community](https://rive.app/community/)
 - [rive quick-start](https://help.rive.app/runtimes/quick-start)
 - [rive android Doc](https://github.com/rive-app/rive-android)

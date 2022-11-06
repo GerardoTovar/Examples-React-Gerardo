@@ -7,19 +7,13 @@ const useBusyIndicator = () => {
   const [text, setText] = useState('');
   const riveRef = useRef(null);
 
-  const check = () => {
-    riveRef.current?.fireState('State Machine 1', 'Check');
-  };
-  const error = () => {
-    riveRef.current?.fireState('State Machine 1', 'Error');
-  };
-  const reset = () => {
-    riveRef.current?.fireState('State Machine 1', 'Reset');
-  };
-  const Texto = string => setText(string);
-  const Visible = boolean => setVisible(boolean);
+  const BIcheck = () => riveRef.current?.fireState('State Machine 1', 'Check');
+  const BIerror = () => riveRef.current?.fireState('State Machine 1', 'Error');
+  const BIreset = () => riveRef.current?.fireState('State Machine 1', 'Reset');
+  const BItexto = string => setText(string);
+  const BIvisible = boolean => setVisible(boolean);
 
-  const Component = (
+  const BusyIndicator = (
     <Modal visible={visible} transparent={true}>
       <View style={Styles.container}>
         <View style={Styles.background}>
@@ -35,6 +29,6 @@ const useBusyIndicator = () => {
       </View>
     </Modal>
   );
-  return {Texto, Visible, check, error, reset, Component};
+  return {BItexto, BIvisible, BIcheck, BIerror, BIreset, BusyIndicator};
 };
 export default useBusyIndicator;

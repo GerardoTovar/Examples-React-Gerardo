@@ -47,8 +47,8 @@ const Home = ({navigation}) => {
   );
   const isEmpty = cart.length === 0;
 
-  const renderItem = props => {
-    const {id, name, price, imageRef, quantity} = props.item;
+  const renderItem = ({item}) => {
+    const {id, name, price, imageRef, quantity} = item;
     return (
       <View style={Style.Item}>
         <Image style={Style.ItemImage} source={{uri: imageRef}} />
@@ -57,7 +57,7 @@ const Home = ({navigation}) => {
           <View style={Style.ItemContainerRow}>
             <CounterInput
               onDecrease={() => removeQuantity(id)}
-              onIncrease={() => addItem(props.item)}
+              onIncrease={() => addItem(item)}
               quantity={quantity}
             />
             <View style={Style.ItemContainerPrice}>
@@ -77,61 +77,6 @@ const Home = ({navigation}) => {
       </View>
     );
   };
-
-  const Separator = () => <View style={Style.Separator} />;
-
-  const FooterTotal = ({items}) => (
-    <View>
-      <Separator />
-      <View style={Style.FootercontainerColumn}>
-        <Text style={[Style.FooterText, Style.FooterTextBold]}>
-          {cartQuantity(cart)} articulo(s)
-        </Text>
-        <FooterSubText
-          style={Style.FooterText}
-          text={'Subtotal'}
-          text2={money(cartTotal(items))}
-        />
-        <FooterSubText
-          style={Style.FooterText}
-          text={'Costo de Envio'}
-          text2={money(0) + '.00'}
-        />
-        <FooterSubText
-          style={Style.FooterText}
-          text={'Descuento'}
-          text2={money(0) + '.00'}
-        />
-        <FooterSubText
-          style={[Style.FooterTitle, Style.FooterTextBold]}
-          text={'Total a pagar'}
-          text2={money(cartTotal(items))}
-        />
-      </View>
-    </View>
-  );
-  const FooterSticky = ({items}) => (
-    <View style={Style.FooterStickycontainerRow}>
-      <View style={Style.FooterStickycontainerColumn}>
-        <Text style={Style.FooterStickySubText}>Total:</Text>
-        <Text style={Style.FooterStickyTitle}>{money(cartTotal(items))}</Text>
-      </View>
-      <CustomButton
-        style={Style.FooterStickyBtn}
-        styleText={Style.FooterStickyBtnText}
-        onPress={() => {
-          addItem(json[1]);
-        }}
-        title={'Proceed with the purchase'}
-      />
-    </View>
-  );
-  const FooterSubText = ({text, text2, style}) => (
-    <View style={Style.FootercontainerRow}>
-      <Text style={style}>{text}</Text>
-      <Text style={style}> {text2}</Text>
-    </View>
-  );
 
   if (isEmpty) {
     return (
@@ -160,14 +105,69 @@ const Home = ({navigation}) => {
     <SafeAreaView style={Style.Maincontainer}>
       <FlatList
         data={cart}
-        ItemSeparatorComponent={() => <Separator />}
+        ItemSeparatorComponent={<Separator />}
         renderItem={renderItem}
         keyExtractor={item => item.id}
-        ListFooterComponent={() => <FooterTotal items={cart} />}
+        ListFooterComponent={<FooterTotal items={cart} />}
       />
-      <FooterSticky items={cart} />
+      <FooterSticky items={cart} addItem={addItem} />
     </SafeAreaView>
   );
 };
+const FooterSticky = ({items, addItem}) => (
+  <View style={Style.FooterStickycontainerRow}>
+    <View style={Style.FooterStickycontainerColumn}>
+      <Text style={Style.FooterStickySubText}>Total:</Text>
+      <Text style={Style.FooterStickyTitle}>{money(cartTotal(items))}</Text>
+    </View>
+    <CustomButton
+      style={Style.FooterStickyBtn}
+      styleText={Style.FooterStickyBtnText}
+      onPress={() => {
+        addItem(json[1]);
+      }}
+      title={'Proceed with the purchase'}
+    />
+  </View>
+);
+
+const FooterSubText = ({text, text2, style}) => (
+  <View style={Style.FootercontainerRow}>
+    <Text style={style}>{text}</Text>
+    <Text style={style}> {text2}</Text>
+  </View>
+);
+const Separator = () => <View style={Style.Separator} />;
+
+const FooterTotal = ({items}) => (
+  <>
+    <Separator />
+    <View style={Style.FootercontainerColumn}>
+      <Text style={[Style.FooterText, Style.FooterTextBold]}>
+        {cartQuantity(items)} articulo(s)
+      </Text>
+      <FooterSubText
+        style={Style.FooterText}
+        text={'Subtotal'}
+        text2={money(cartTotal(items))}
+      />
+      <FooterSubText
+        style={Style.FooterText}
+        text={'Costo de Envio'}
+        text2={money(0) + '.00'}
+      />
+      <FooterSubText
+        style={Style.FooterText}
+        text={'Descuento'}
+        text2={money(0) + '.00'}
+      />
+      <FooterSubText
+        style={[Style.FooterTitle, Style.FooterTextBold]}
+        text={'Total a pagar'}
+        text2={money(cartTotal(items))}
+      />
+    </View>
+  </>
+);
 
 export default Home;

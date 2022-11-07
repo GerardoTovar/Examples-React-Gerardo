@@ -19,6 +19,7 @@
     "rive-react-native": "^3.0.38"
   },
   "devDependencies": {
+    "prettier": "^2.7.1",
     "@babel/core": "^7.18.5",
     "@babel/eslint-parser": "^7.18.2",
     "@babel/runtime": "7.18.3",

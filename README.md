@@ -84,3 +84,16 @@ This example uses:
 - **Description**: is a button component which is highly customizable to receive different icons, images or styles
 
 <img src="./img/CustomButton/Screenshot.png" width="280"/>
+
+## example of Input
+
+- 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/CustomInput)
+
+This example uses:
+- React Native `0.70.5`
+- [React Navigation Stack 6.9.1](https://reactnavigation.org/docs/getting-started)
+- [Vector Icons 9.2.0](https://www.npmjs.com/package/react-native-vector-icons)
+- [react-native-awesome-text-input 1.1.5](https://www.npmjs.com/package/react-native-awesome-text-input)
+- **Description**: is a Input component which is highly customizable to receive different styles
+
+<img src="./img/CustomInput/Screenshot.png" width="280"/>

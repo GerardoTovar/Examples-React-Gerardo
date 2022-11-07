@@ -72,3 +72,15 @@ This example uses:
 - **Description**: custom components are used for counter, buttons. everything else is using a flat list
 
 <img src="./img/RnZustand/Screenshot.gif" width="280"/>
+
+## example of Buttons
+
+- 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/CustomButton)
+
+This example uses:
+- React Native `0.70.5`
+- [React Navigation Stack 6.9.1](https://reactnavigation.org/docs/getting-started)
+- [Vector Icons 9.2.0](https://www.npmjs.com/package/react-native-vector-icons)
+- **Description**: is a button component which is highly customizable to receive different icons, images or styles
+
+<img src="./img/CustomButton/Screenshot.png" width="280"/>

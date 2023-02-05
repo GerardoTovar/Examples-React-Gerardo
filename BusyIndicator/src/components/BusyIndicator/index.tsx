@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Modal, ActivityIndicator, Text, View} from 'react-native';
 import Styles from './Styles';
 import {IUseBusyIndicator} from './interfaces';
-const useBusyIndicator = (): IUseBusyIndicator => {
+const useBusyIndicator = () => {
   const [visible, setVisible] = useState(false);
   const [text, setText] = useState('Loading');
 

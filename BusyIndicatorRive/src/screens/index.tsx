@@ -4,7 +4,7 @@ import useBusyIndicator from '../components/BusyIndicator';
 //the setTimeout mimics the time it takes for the app
 //to communicate with the api and animations
 //depending on the api response
-const Home = ({navigation}) => {
+const Home = (): JSX.Element => {
   const {BItexto, BIvisible, BIcheck, BIerror, BIreset, BusyIndicator} =
     useBusyIndicator();
   const handlerBusyIndicator = async () => {

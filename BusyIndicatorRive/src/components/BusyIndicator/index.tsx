@@ -1,17 +1,18 @@
 import React, {useRef, useState} from 'react';
 import {Modal, Text, View} from 'react-native';
 import Styles from './Styles';
-import Rive from 'rive-react-native';
+import Rive, {RiveRef} from 'rive-react-native';
+
 const useBusyIndicator = () => {
   const [visible, setVisible] = useState(false);
   const [text, setText] = useState('');
-  const riveRef = useRef(null);
+  const riveRef = useRef<RiveRef>(null);
 
   const BIcheck = () => riveRef.current?.fireState('State Machine 1', 'Check');
   const BIerror = () => riveRef.current?.fireState('State Machine 1', 'Error');
   const BIreset = () => riveRef.current?.fireState('State Machine 1', 'Reset');
-  const BItexto = string => setText(string);
-  const BIvisible = boolean => setVisible(boolean);
+  const BItexto = (string: string) => setText(string);
+  const BIvisible = (boolean: boolean) => setVisible(boolean);
 
   const BusyIndicator = (
     <Modal visible={visible} transparent={true}>

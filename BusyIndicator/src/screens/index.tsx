@@ -3,7 +3,7 @@ import {View, Text, Pressable, StyleSheet} from 'react-native';
 import useBusyIndicator from '../components/BusyIndicator';
 //the setTimeout mimics the time it takes for the app
 //to communicate with the api
-const Home = () => {
+const Home = (): JSX.Element => {
   const {BIVisible, BIText, BusyIndicator} = useBusyIndicator();
   const handlerBusyIndicator = async () => {
     BIText('Loading');

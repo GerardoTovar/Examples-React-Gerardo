@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import {Modal, ActivityIndicator, Text, View} from 'react-native';
 import Styles from './Styles';
-
-const useBusyIndicator = () => {
+import {IUseBusyIndicator} from './interfaces';
+const useBusyIndicator = (): IUseBusyIndicator => {
   const [visible, setVisible] = useState(false);
   const [text, setText] = useState('Loading');
 
-  const BIText = string => setText(string);
-  const BIVisible = boolean => setVisible(boolean);
+  const BIText = (string: string) => setText(string);
+  const BIVisible = (boolean: boolean) => setVisible(boolean);
 
-  const BusyIndicator = (
+  const BusyIndicator: JSX.Element = (
     <Modal visible={visible} transparent={true}>
       <View style={Styles.container}>
         <View style={Styles.background}>

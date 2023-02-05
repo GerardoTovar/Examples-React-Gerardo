@@ -9,8 +9,8 @@ You may find some of the examples being outdated in time, in terms of framework 
 - 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/BusyIndicator)
 
 This example uses:
-- React Native `0.70.4`
-- [React Navigation Stack 6.9.1](https://reactnavigation.org/docs/getting-started)
+- React Native `0.71.2`
+- [React Navigation Stack 6.9.9](https://reactnavigation.org/docs/getting-started)
 - **Description**: A modal was used to cover the whole screen, 
 inside the modal it has an ActivityIndicator, so you can customize everything
 

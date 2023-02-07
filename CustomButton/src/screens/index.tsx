@@ -3,7 +3,7 @@ import {View, StyleSheet} from 'react-native';
 import CustomButton from '../components/atoms/Form/CustomButton';
 import colors from '../constants/colors';
 
-const Home = () => {
+const Home = (): JSX.Element => {
   return (
     <View style={styles.container}>
       <CustomButton text={'text with an icon to the left'} iconName="pencil" />

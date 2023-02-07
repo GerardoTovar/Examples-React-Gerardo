@@ -6,8 +6,24 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import IconEvilIcons from 'react-native-vector-icons/EvilIcons';
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {ColorValue, TextStyle} from 'react-native/types';
 
-const Icon = ({directory, name, size, color, style}) => {
+interface Iicon {
+  directory?:
+    | 'Ionicons'
+    | 'EvilIcons'
+    | 'FontAwesome5'
+    | 'MaterialCommunityIcons'
+    | 'Feather'
+    | 'MaterialIcons'
+    | 'FontAwesome';
+  name: string;
+  size?: number;
+  color?: ColorValue | number;
+  style?: TextStyle;
+}
+
+const Icon = ({directory, name, size = 12, color, style}: Iicon) => {
   const props = {name, size, color, style};
   switch (directory) {
     case 'Ionicons':
@@ -22,6 +38,8 @@ const Icon = ({directory, name, size, color, style}) => {
       return <Feather {...props} />;
     case 'MaterialIcons':
       return <MaterialIcons {...props} />;
+    case 'FontAwesome':
+      return <IconFontAwesome {...props} />;
     default:
       return <IconFontAwesome {...props} />;
   }

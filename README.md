@@ -78,8 +78,8 @@ This example uses:
 - 🐙 [Repo](https://github.com/GerardoTovar/Examples-React-Gerardo/tree/main/CustomButton)
 
 This example uses:
-- React Native `0.70.5`
-- [React Navigation Stack 6.9.1](https://reactnavigation.org/docs/getting-started)
+- React Native `0.71.2`
+- [React Navigation Stack 6.9.9](https://reactnavigation.org/docs/getting-started)
 - [Vector Icons 9.2.0](https://www.npmjs.com/package/react-native-vector-icons)
 - **Description**: is a button component which is highly customizable to receive different icons, images or styles
 

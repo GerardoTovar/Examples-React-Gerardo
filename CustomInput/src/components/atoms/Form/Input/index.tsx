@@ -1,10 +1,26 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import {AwesomeTextInput} from 'react-native-awesome-text-input';
-import {View} from 'react-native';
+import {StyleProp, TextStyle, View, ViewStyle} from 'react-native';
 import Style from './Style';
 import ErrorMessage from '../ErrorMessage';
 import CustomButton from '../CustomButton';
 import colors from '../../../../constants/colors';
+interface IAwesomeTextInput {
+  title?: string;
+  styleTitle?: TextStyle;
+  value?: string;
+  styleValue?: StyleProp<TextStyle>;
+  onChangeText?: (text: string) => void;
+  error?: string;
+  secure?: boolean;
+  editable?: boolean;
+  styleInput?: ViewStyle;
+  styleContainer?: ViewStyle;
+  styleMainContainer?: StyleProp<ViewStyle>;
+  multiline?: boolean;
+  placeholder?: string;
+}
+
 const Input = ({
   title,
   styleTitle,
@@ -12,19 +28,19 @@ const Input = ({
   styleValue,
   onChangeText,
   error,
-  secure,
+  secure = false,
   editable = true,
   styleInput,
   styleContainer,
   styleMainContainer,
-  multiline,
+  multiline = false,
   placeholder,
-}) => {
+}: IAwesomeTextInput) => {
   const [Secure, setSecure] = useState(secure);
   const [focus, setFocus] = useState({borderColor: '#e3e3e3'});
   const onFocus = useCallback(() => setFocus({borderColor: '#0388fc'}), []);
   const onBlur = useCallback(
-    () => (error ? setFocus({borderColor: 'red'}) : setFocus({})),
+    () => (error ? setFocus({borderColor: 'red'}) : setFocus({} as any)),
     [error],
   );
   useEffect(onBlur, [onBlur]);
@@ -37,7 +53,7 @@ const Input = ({
         placeholder={placeholder}
         onBlur={onBlur}
         onFocus={onFocus}
-        placeholderTextColor={colors.TXT_PRIMARY_COLOR}
+        placeholderTextColor={colors.BTN_TXT_PRIMARY_COLOR}
         multiline={multiline}
         label={title}
         customStyles={{
